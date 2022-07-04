@@ -57,7 +57,7 @@ RUN git clone --depth=1 --branch $MUSICBRAINZ_SERVER_VERSION https://github.com/
 WORKDIR /musicbrainz-server
 
 ARG NODE_VERSION=16.1.0
-ARG PGP_SERVERS="keys.openpgp.org keyserver.ubuntu.com pgp.mit.edu"
+ARG PGP_SERVERS=" hkp://keyserver.ubuntu.com:80 keyserver.ubuntu.com pgp.mit.edu"
 RUN cp docker/yarn_pubkey.txt /tmp/yarn-key.asc && \
     cd /tmp && \
     gpg --no-default-keyring --keyring /tmp/yarn-keyring.gpg --import /tmp/yarn-key.asc && \

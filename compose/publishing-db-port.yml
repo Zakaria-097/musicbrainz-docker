@@ -5,4 +5,4 @@ version: '3.1'
 services:
   db:
     ports:
-      - "${MUSICBRAINZ_DOCKER_HOST_IPADDRCOL:-}5432:5432"
+      - "${MUSICBRAINZ_DOCKER_HOST_IPADDRCOL:-}5419:5432"
